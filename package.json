@@ -10,5 +10,8 @@
     "typescript": "2.5.3",
     "webpack": "2.2.0",
     "webpack-dev-server": "2.2.0"
+  },
+  "dependencies": {
+    "tslint": "^5.8.0"
   }
 }
