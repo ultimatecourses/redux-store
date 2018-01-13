@@ -27,7 +27,6 @@ export class Store {
     };
   }
 
-  unsubscribe()
   dispatch(action) {
     this.state = this.reduce(this.state, action);
     this.notify();
