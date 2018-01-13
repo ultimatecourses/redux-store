@@ -38,3 +38,9 @@ todoList.addEventListener('click', function(event) {
     console.log(target);
   }
 });
+
+const unsubscribe = store.subscribe(state => renderTodos(state.todos.data));
+
+destroy.addEventListener('click', function(event) {
+  unsubscribe();
+});

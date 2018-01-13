@@ -18,8 +18,23 @@ export class Store {
     return this.state;
   }
 
+  // Food for thought, another way to handle this, is to only subscribe to the subset of state you'r interested, rather than getting constant unwanted feedback
+  subscribe(subscription: Function) {
+    this.subscribers = [...this.subscribers, subscription];
+    // When subscribe, also send the latest state immediately
+    subscription(this.value);
+    return () => {this.subscribers = this.subscribers.filter(sub => sub !== subscription)
+    };
+  }
+
+  unsubscribe()
   dispatch(action) {
     this.state = this.reduce(this.state, action);
+    this.notify();
+  }
+
+  private notify() {
+    this.subscribers.forEach(fn => fn(this.value));
   }
 
   private reduce(state, action) {
