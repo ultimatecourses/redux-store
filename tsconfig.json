@@ -6,7 +6,7 @@
     "outDir": "dist",
     "noEmitOnError": true,
     "strictNullChecks": true,
-    "sourceMap": false,
+    "sourceMap": true,
     "experimentalDecorators": true
   }
 }

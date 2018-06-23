@@ -1,5 +1,7 @@
 module.exports = {
+  mode: "development",
   entry: './src/app.ts',
+  devtool: 'inline-source-map',
   output: {
     filename: 'app.js',
     path: __dirname + '/dist/',
@@ -14,7 +16,8 @@ module.exports = {
     rules: [
       {
         test: /\.ts$/,
-        use: 'awesome-typescript-loader',
+        use: 'ts-loader',
+        exclude: /node_modules/
       },
     ],
   },
