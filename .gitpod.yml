@@ -1,0 +1,5 @@
+image: gitpod/workspace-full
+
+tasks:
+  - init: yarn install
+    command: yarn run start

@@ -1,3 +1,5 @@
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/UltimateAngular/redux-store)
+
 <h1 align="center">Simple Redux Store</h1>
 <h4 align="center">Vanilla TypeScript example of a Redux Store</h4>
 
