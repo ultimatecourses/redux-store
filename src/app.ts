@@ -32,9 +32,15 @@ button.addEventListener(
   false
 );
 
+const unsubscribe = store.subscribe((state) => {
+  renderTodos(state.todos.data);
+});
+
 todoList.addEventListener("click", function (event) {
   const target = event.target as HTMLButtonElement;
   if (target.nodeName.toLowerCase() === "button") {
     console.log(target);
   }
 });
+
+store.subscribe((state) => console.log("STATE:::", state));
